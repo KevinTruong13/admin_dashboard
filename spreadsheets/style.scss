@@ -1,0 +1,18 @@
+@use "modern_css_reset.css";
+
+:root {
+    --main-color: #14b8a6;
+}
+
+body {
+    display: grid;
+    grid: auto 1fr / auto 1fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+}
+
+body>nav {
+    grid-area: sidebar;
+    background-color: var(--main-color);
+}
