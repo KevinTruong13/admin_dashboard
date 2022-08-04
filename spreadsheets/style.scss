@@ -1,10 +1,22 @@
 @use "modern_css_reset.css";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@mixin grid-content-center($auto-flow: row, $box-axis: center, $inline-axis: center) {
+    display: grid;
+    justify-content: $inline-axis;
+    align-content: $box-axis;
+    grid-auto-flow: $auto-flow;
+}
+
 :root {
-    --main-color: #14b8a6;
+    --main-color: #0d9488;
+    --title-font-size: 1.5rem;
+    --nav-font-size: 1.2rem;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid: auto 1fr / auto 1fr;
     grid-template-areas:
@@ -15,4 +27,58 @@ body {
 body>nav {
     grid-area: sidebar;
     background-color: var(--main-color);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+}
+
+.dashboard-icon {
+    font-size: 3rem;
+}
+
+a:any-link {
+    text-decoration: none;
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 5rem repeat(10, 2rem);
+    padding: 1rem;
+    gap: .5rem;
+    min-width: 18rem;
+
+    div {
+        @include grid-content-center(column, center, start);
+        align-items: center;
+        gap: 1rem;
+    }
+
+    div:first-child {
+        margin: -2rem 0 0;
+    }
+
+    div:not(:first-child) {
+        padding: 0 0 0 .75rem;
+    }
+
+    .material-symbols-outlined,
+    h1,
+    a {
+        color: white;
+    }
+
+    a:any-link {
+        font-weight: bold;
+        font-size: var(--nav-font-size)
+    }
+
+    h1 {
+        display: inline-block;
+        font-size: var(--title-font-size);
+    }
 }
