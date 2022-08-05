@@ -112,6 +112,9 @@ header {
     grid-template: auto auto / 1fr repeat(3, 8rem);
     padding: 1rem 4rem;
     row-gap: 1rem;
+    box-shadow: 0 4px 4px #bcc0c5;
+    position: relative;
+    z-index: 2;
 
     .search,
     .greeting-display {
@@ -220,4 +223,10 @@ label[for="search"] {
 
 main {
     background-color: var(--grey-color);
+    display: grid;
+    grid-template: 1fr 1fr / 2.5fr 1fr;
+}
+
+section {
+    grid-row: 1 / -1;
 }
