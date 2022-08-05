@@ -139,6 +139,21 @@ nav h1 {
   font-size: var(--title-font-size);
 }
 
+header {
+  display: grid;
+  grid-template: auto auto/1fr repeat(3, 8rem);
+  padding: 1rem 4rem;
+}
+header * {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  grid-auto-flow: column;
+}
+header .user-display {
+  grid-column: 2/-1;
+}
+
 main {
   background-color: var(--grey-color);
 }
