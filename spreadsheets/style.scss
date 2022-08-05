@@ -14,6 +14,7 @@
     --grey-color: #E3E8EF;
     --title-font-size: 1.8rem;
     --nav-font-size: 1.4rem;
+    --profile-picture-size: 4rem;
 }
 
 body {
@@ -156,8 +157,8 @@ label[for="search"] {
 }
 
 .profile-picture {
-    min-height: 4rem;
-    min-width: 4rem;
+    min-height: var(--profile-picture-size);
+    min-width: var(--profile-picture-size);
     border: var(--grey-color) solid 1px;
     border-radius: 50%;
     background-size: 80%;
@@ -179,6 +180,24 @@ label[for="search"] {
 
 .youkai {
     background-image: url(./../img/youkai_jinmenken.png);
+}
+
+.greeting-display {
+    gap: 1rem;
+
+    p {
+        font-weight: 500;
+    }
+}
+
+.user-name-full {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.profile-picture-big {
+    min-height: calc(var(--profile-picture-size) * 1.25);
+    min-width: calc(var(--profile-picture-size) * 1.25);
 }
 
 main {
