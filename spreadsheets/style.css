@@ -218,6 +218,7 @@ label[for=search] {
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 1px 2px 1px var(--grey-color);
 }
 
 .corgi {
