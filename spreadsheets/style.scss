@@ -51,6 +51,10 @@ a:any-link {
     text-decoration: none;
 }
 
+button {
+    font-family: inherit;
+}
+
 nav {
     display: grid;
     grid-template-rows: 5rem repeat(10, 2rem);
@@ -102,6 +106,8 @@ nav {
 }
 
 header {
+    @include grid-center(row, center, center);
+
     display: grid;
     grid-template: auto auto / 1fr repeat(3, 8rem);
     padding: 1rem 4rem;
@@ -199,6 +205,17 @@ label[for="search"] {
 .profile-picture-big {
     min-height: calc(var(--profile-picture-size) * 1.25);
     min-width: calc(var(--profile-picture-size) * 1.25);
+}
+
+.post-control {
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 24px;
+    min-height: 3rem;
+    max-width: 7rem;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 main {
