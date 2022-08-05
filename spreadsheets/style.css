@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -138,8 +138,11 @@ nav a {
   color: white;
 }
 nav a:any-link {
-  font-weight: bold;
   font-size: var(--nav-font-size);
+}
+nav a:any-link,
+nav h1 {
+  font-weight: 500;
 }
 nav h1 {
   display: inline-block;

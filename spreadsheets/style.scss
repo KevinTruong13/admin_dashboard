@@ -1,6 +1,6 @@
 @use "modern_css_reset.css";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 @mixin grid-center($auto-flow: row, $box-axis: center, $inline-axis: center) {
     display: grid;
@@ -86,8 +86,12 @@ nav {
     }
 
     a:any-link {
-        font-weight: bold;
         font-size: var(--nav-font-size)
+    }
+
+    a:any-link,
+    h1 {
+        font-weight: 500;
     }
 
     h1 {
