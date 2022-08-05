@@ -93,15 +93,15 @@ body > nav {
 }
 
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
 }
 
 .dashboard-icon {
   font-size: 3rem;
 }
 
-.search-icon {
-  font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 0, "opsz" 48;
+.notification-icon {
+  font-size: 2rem;
 }
 
 a:any-link {
@@ -115,10 +115,13 @@ nav {
   gap: 0.5rem;
   min-width: 18rem;
 }
+nav .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 0, "opsz" 48;
+}
 nav div {
   display: grid;
   justify-content: start;
-  align-content: center;
+  align-items: center;
   grid-auto-flow: column;
   align-items: center;
   gap: 1rem;
@@ -147,41 +150,86 @@ header {
   display: grid;
   grid-template: auto auto/1fr repeat(3, 8rem);
   padding: 1rem 4rem;
+  row-gap: 1rem;
 }
 header .search,
 header .greeting-display {
   display: grid;
   justify-content: start;
-  align-content: center;
+  align-items: center;
   grid-auto-flow: column;
 }
 header .user-display {
   display: grid;
   justify-content: end;
-  align-content: center;
+  align-items: center;
   grid-auto-flow: column;
 }
 header > button {
   display: grid;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   grid-auto-flow: column;
 }
-header label[for=search] {
+
+label[for=search] {
   line-height: 0;
 }
-header .search {
+
+.search {
   grid-template-columns: auto minmax(5rem, 80%);
   gap: 1rem;
 }
-header #search {
+
+#search {
   background-color: var(--grey-color);
   border: 0;
   border-radius: 20px;
   min-height: 2.5rem;
 }
-header .user-display {
+
+.user-display {
   grid-column: 2/-1;
+  gap: 0.5rem;
+}
+.user-display p {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.notification-bell {
+  border: none;
+}
+
+.profile-picture,
+.notification-bell {
+  background-color: inherit;
+}
+
+.profile-picture {
+  min-height: 4rem;
+  min-width: 4rem;
+  border: var(--grey-color) solid 1px;
+  border-radius: 50%;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.corgi {
+  background-image: url(./../img/dog_corgi_tricolor.png);
+}
+
+.springer-spaniel {
+  background-image: url(./../img/dog_english_springer_spaniel.png);
+}
+
+.great-dane {
+  background-image: url(./../img/dog_great_dane.png);
+}
+
+.youkai {
+  background-image: url(./../img/youkai_jinmenken.png);
 }
 
 main {
