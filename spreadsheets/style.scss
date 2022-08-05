@@ -11,6 +11,7 @@
 
 :root {
     --main-color: #0d9488;
+    --grey-color: #E3E8EF;
     --title-font-size: 1.8rem;
     --nav-font-size: 1.4rem;
 }
@@ -81,4 +82,8 @@ nav {
         display: inline-block;
         font-size: var(--title-font-size);
     }
+}
+
+main {
+    background-color: var(--grey-color);
 }

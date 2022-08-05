@@ -75,6 +75,7 @@ select {
 /* Credit to Andy Bell at https: //piccalil.li/blog/a-modern-css-reset/ */
 :root {
   --main-color: #0d9488;
+  --grey-color: #E3E8EF;
   --title-font-size: 1.8rem;
   --nav-font-size: 1.4rem;
 }
@@ -136,6 +137,10 @@ nav a:any-link {
 nav h1 {
   display: inline-block;
   font-size: var(--title-font-size);
+}
+
+main {
+  background-color: var(--grey-color);
 }
 
 /*# sourceMappingURL=style.css.map */
