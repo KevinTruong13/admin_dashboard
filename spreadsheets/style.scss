@@ -97,8 +97,17 @@ header {
     grid-template: auto auto / 1fr repeat(3, 8rem);
     padding: 1rem 4rem;
 
-    >* {
+    .search,
+    .greeting-display {
         @include grid-content-center(column, center, start);
+    }
+
+    .user-display {
+        @include grid-content-center(column, center, end);
+    }
+
+    >button {
+        @include grid-content-center(column, center, center);
     }
 
     label[for="search"] {

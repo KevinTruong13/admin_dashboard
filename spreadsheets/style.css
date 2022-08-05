@@ -148,9 +148,22 @@ header {
   grid-template: auto auto/1fr repeat(3, 8rem);
   padding: 1rem 4rem;
 }
-header > * {
+header .search,
+header .greeting-display {
   display: grid;
   justify-content: start;
+  align-content: center;
+  grid-auto-flow: column;
+}
+header .user-display {
+  display: grid;
+  justify-content: end;
+  align-content: center;
+  grid-auto-flow: column;
+}
+header > button {
+  display: grid;
+  justify-content: center;
   align-content: center;
   grid-auto-flow: column;
 }
