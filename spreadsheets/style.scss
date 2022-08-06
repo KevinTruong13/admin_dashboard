@@ -180,7 +180,6 @@ label[for="search"] {
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 1px 2px 1px var(--grey-color);
 }
 
 .corgi {
@@ -236,8 +235,6 @@ main {
     >div {
         padding: 1.5rem 1rem;
     }
-
-    >div:last-child {}
 
     h1 {
         font-weight: 500;
