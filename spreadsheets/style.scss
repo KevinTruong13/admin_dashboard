@@ -231,11 +231,13 @@ label[for="search"] {
 main {
     background-color: var(--grey-color);
     display: grid;
-    grid-template: 1fr 1fr / 2.5fr 1fr;
+    grid-template: auto 1fr / 2.5fr 1fr;
 
     >div {
         padding: 1.5rem 1rem;
     }
+
+    >div:last-child {}
 
     h1 {
         font-weight: 500;
@@ -245,10 +247,6 @@ main {
 
     >div:first-child {
         grid-row: 1 / -1;
-
-        h1 {
-            font-size: 1.6rem;
-        }
     }
 
     p {
@@ -305,7 +303,7 @@ section {
 
 ul {
     background-color: white;
-    padding: 0;
+    margin: 0;
     border-radius: 16px;
     padding: .5rem 2rem;
 }
