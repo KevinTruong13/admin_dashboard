@@ -302,7 +302,7 @@ main p {
   color: var(--darker-grey);
 }
 main .project,
-main .aside {
+main ul {
   box-shadow: 2px 4px 4px var(--grey-medium);
 }
 
