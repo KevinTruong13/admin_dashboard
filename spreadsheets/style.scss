@@ -233,14 +233,18 @@ main {
         padding: 1.5rem 1rem;
     }
 
-    >div:first-child {
-        grid-row: 1 / -1;
-    }
-
     h1 {
         font-weight: 500;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin: 0 0 .5rem;
+    }
+
+    >div:first-child {
+        grid-row: 1 / -1;
+
+        h1 {
+            font-size: 1.6rem;
+        }
     }
 
     p {
@@ -277,4 +281,20 @@ section {
         @include grid-center(column, center, end);
         gap: 1.5rem;
     }
+}
+
+.green-border {
+    border-left: 8px solid #A7C957;
+}
+
+.red-border {
+    border-left: 8px solid #DB5461;
+}
+
+.selected-icon {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 48;
 }

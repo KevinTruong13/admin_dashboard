@@ -287,13 +287,16 @@ main {
 main > div {
   padding: 1.5rem 1rem;
 }
+main h1 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
 main > div:first-child {
   grid-row: 1/-1;
 }
-main h1 {
-  font-weight: 500;
+main > div:first-child h1 {
   font-size: 1.6rem;
-  margin: 0 0 0.5rem;
 }
 main p {
   color: var(--darker-grey);
@@ -328,6 +331,18 @@ section h2 {
   align-items: center;
   grid-auto-flow: column;
   gap: 1.5rem;
+}
+
+.green-border {
+  border-left: 8px solid #A7C957;
+}
+
+.red-border {
+  border-left: 8px solid #DB5461;
+}
+
+.selected-icon {
+  font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 0, "opsz" 48;
 }
 
 /*# sourceMappingURL=style.css.map */
