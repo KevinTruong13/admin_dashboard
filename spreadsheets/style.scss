@@ -117,8 +117,8 @@ header {
 
     display: grid;
     grid-template: auto auto / 1fr repeat(3, 8rem);
-    padding: 1rem 4rem;
-    row-gap: 1rem;
+    padding: .5rem 4rem 1rem;
+    row-gap: .5rem;
     box-shadow: 0 4px 4px var(--grey-medium);
     position: relative;
     z-index: 2;
@@ -173,8 +173,8 @@ label[for="search"] {
 }
 
 .profile-picture {
-    min-height: var(--profile-picture-size);
     min-width: var(--profile-picture-size);
+    aspect-ratio: 1;
     border: var(--grey-color) solid 1px;
     border-radius: 50%;
     background-size: 80%;
@@ -220,11 +220,11 @@ label[for="search"] {
     background-color: var(--main-color);
     border: none;
     border-radius: 24px;
-    min-height: 3rem;
+    min-height: 2.5rem;
     max-width: 7rem;
     color: white;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 main {
@@ -233,7 +233,11 @@ main {
     grid-template: auto 1fr / 2.5fr 1fr;
 
     >div {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 1rem 0;
+    }
+
+    >div:last-child {
+        padding: 1rem 1rem;
     }
 
     h1 {
@@ -258,7 +262,7 @@ main {
 
 section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40ch, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30ch, 1fr));
     gap: 1rem;
 
     h2 {
@@ -306,8 +310,6 @@ ul {
 }
 
 .announcement-list {
-
-
     h2 {
         font-size: 1rem;
         font-weight: 500;
@@ -323,6 +325,32 @@ ul {
     }
 
     li {
-        padding: 1rem 0;
+        padding: .5rem 0;
     }
+}
+
+.trending-project-list {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+
+    li {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 1rem;
+
+        >div {
+            display: grid;
+            align-content: center;
+        }
+    }
+
+    .profile-picture {
+        max-width: 3rem;
+    }
+}
+
+.user-name {
+    color: black;
 }
